@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html, body {
+            height: 100%;
+            overflow-y: hidden;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        canvas {
+            border: 1px solid;
+        }
+        canvas:hover {
+            cursor: pointer;
+        }
+        .game-container {
+            display: flex;
+        }
+        .game-stats {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .game-stats > * {
+            min-width: 150px;
+            height: 25%;
+            border: 2px solid;
+        }
+        .game-stats-tetromino {
+            background-color: #655d50;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            padding: 20px;
+            grid-gap: 1px;
+        }
+        .game-stats-totalscore, .game-stats-lines, .game-stats-level {
+            display: flex;
+            align-items: center;
+            padding: 0 10px;
+            font-family: Georgia;
+            background-color: #655d50;
+            color: white;
+        }
+        .game-stats-totalscore span, .game-stats-lines span, .game-stats-level span {
+            font-weight: bold;
+            font-size: 18px;
+            padding-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="game-container">
+        <canvas id="game" width="300" height="600"></canvas>
+        <div class="game-stats">
+            <div class="game-stats-tetromino">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="game-stats-totalscore"></div>
+            <div class="game-stats-lines"></div>
+            <div class="game-stats-level"></div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
